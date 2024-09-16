@@ -105,7 +105,10 @@ animals.push(duck);
 // 6. [ ] `console.log` `animals`. What does it look like?
 console.log(animals);
 // 7. [ ] Create two more animal objects each with a species, a name, and at least two sounds sounds and add each one of them to `animals.
-var dog = {species}
+var dog = {species: 'dawg', name: 'Milo', noises: ['bark', 'growl']};
+var cat = {species: 'cat', name: 'Camper', noises: ['meow', 'purr']};
+animals.push(dog);
+animals.push(cat);
 // 8. [ ] `console.log` `animals`, and, `console.log` the length of `animals`. Is everything looking right?
 
 
