@@ -9,30 +9,47 @@
  * and read every instruction carefully.
  */
 
+const { animal } = require("./data");
+
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-// Imagine that our website has a profile page for each animal. On this profile page we can see a list of each animal's friend on the website. Just like how people have a list of friends or followers on facebook or instagram. What would be a good data structure to hold this list of friends?
-
-//  1. [ ] Choose a data structure for this **list** of friends.
-// using an array for 
-//  2. [ ] Write a comment in your code that explains why you chose this data structure.
-//
-//  3. [ ] Create a variable called `friends` and assign it to the data structure that you chose.
-var friends = 
-//  4. [ ] Take a look at the documentation for `Math.random` here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-//  5. [ ] Write a function called `getRandom` that takes our `animals` array and returns  a random `index` of the input array, using `Math.random`
-//  6. [ ] Using a random index from this function that you just created, get a random animal and add its `name` to `friends`.
-//  7. [ ] `console.log` `friends`.
-//  8. [ ] Using **bracket notation**, add the `friends` list as a **property** also named `friends` on one of the animals in the `animals` array
-//  9. [ ] `console.log` your work.
+// 1. Open up the file `functions.js` in your editor.
+// 2. Implement a function declaration called `search` that:
+function search(animals, name) {
+    //iterates through the animals array
+    for (var i = 0; i < animals.length; i++) {
+        // check if the animal name is the search name
+        if (animals[i].name === name) {
+            return animals[i];
+        }
+    }
+    return null; 
+}
+//   - Takes a paramater representing an Array of `animals`.
+//   - Takes a paramater representing a String, the name of an animal on which to perform a search.
+//   - Looks through the `animals` Array, and returns the animal's Object if an animal with that name exists.
+//   - Returns `null` if no animal with that name exists
+// 3. Use the search bar at the top of the page to make sure your function works.
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+// 1. Write a function declaration called `replace` with a signature of `replace(animals, name, replacement) { //... } ` that:
+//     - Takes 3 parameters, an Array of animals, a String representing  the name of an animal on which to perform a search, and an Object that represents the replacement animal.
+//     - If an animal with that name exists within the `animals` Array, replace it's entire Object with the replacement Object.
+//     - Otherwise do nothing.
+//   2. Preview the `index.html` page to test it on the website.
+function replace(animals, name, replacement) {
+    for(i = 0; i < animals.length; i++) {
+        if(animals[i].name === name) {
+            animals[i] = replacement;
+            return;
+        }
+    }
 
-
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
