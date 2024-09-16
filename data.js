@@ -31,12 +31,38 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+// 1. [ ] Create a variable named `noises` and assign it to an empty array.
+var noises = [];
+// 2. [ ] Using **bracket notation** give `noises` it's first element. A string representing a sound your animal might make.
+noises[0] = 'quack';
+// 3. [ ] Using an array function add another noise to the end of `noises`.
+noises.push('click');
+// 4. [ ] Go to the array documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array?redirectlocale=en-US
+// 5. [ ] Look through the functions until you find the one that will place an element at the begining of the array.
+//noises.unshift('groan');
+// 6. [ ] Add an element to `noises` using this function.
+noises.unshift('groan');
+// 7. [ ] Using **bracket syntax** again, add another element to the end of `noises`. Make sure that the way you do this step would work no matter how many elements `noises` had. In other words, don't hard code the position of the new element.
+noises[noises.length] = 'boom';
+// 8. [ ] `console.log` the length of `noises`
+console.log(noises.length);
+// 9. [ ] `console.log` the last element in `noises` again without hard coding the index.
+console.log(noises[noises.length -1]);
+// 10. [ ] `console.log` the whole array.
+console.log(noises);
+// 11. [ ] Does it look right?
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+// 1. [ ] Using **bracket syntax**, assign the `noises` property on `animal` to our new `noises` array.
+animal['noises'] = noises
+// 2. [ ] Using any syntax add another noise to the `noises` property on `animal`.
+animal.noises.push('whinney');
+// 3. [ ] `console.log` `animal`.
+console.log(animal);
+// 4. [ ] Does it look right?
 
 
 
@@ -49,7 +75,8 @@ console.log(animal);
  *
  * *******************************************************************
  */
-
+// 1. [ ] What are the different ways you can access properties on objects?
+// 2. [ ] What are the different ways of accessing elements on  arrays?
 /* *******************************************************************
  * Step 5 - Take a Break!
  *
@@ -62,7 +89,24 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+// 1. [ ] Create a variable named `animals` and assign it to an empty array.
+var animals = [];
+// 2. [ ] `push` our `animal` that we created to `animals`. You should now see your first animal appear on your `index.html` page!
+animals.push(animal);
+// 3. [ ] `console.log` `animals`. What does it look like?
+console.log(animals);
+// 4. [ ] Create a variable called `duck` and assign it to the data:
+var duck = {species: 'duck', 
+name: 'Jerome', 
+noises: ['quack', 'honk', 'sneeze', 'woosh']};
+//  - `{ species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] }`
+// 5. [ ] `push` `duck` to `animals`
+animals.push(duck);
+// 6. [ ] `console.log` `animals`. What does it look like?
+console.log(animals);
+// 7. [ ] Create two more animal objects each with a species, a name, and at least two sounds sounds and add each one of them to `animals.
+var dog = {species}
+// 8. [ ] `console.log` `animals`, and, `console.log` the length of `animals`. Is everything looking right?
 
 
 //////////////////////////////////////////////////////////////////////
