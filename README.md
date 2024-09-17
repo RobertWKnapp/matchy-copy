@@ -150,6 +150,8 @@ These Functions will pass in all needed parameters, meaning, we will not reach i
    - Adds this new Object to the `animals` Array, **only** if all the other conditions pass.
    - Make sure it works.
 
+
+
 This is called **data validation** and it's extremely important in web development!
  
 ## Step 5 - Break

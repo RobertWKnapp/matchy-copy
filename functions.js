@@ -54,13 +54,41 @@ function replace(animals, name, replacement) {
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+// 1. Write a function declaration called `remove` with a signature of `remove(animals, name)` that:
+// - Takes 2 parameters, an Array of animals, and a name of an animal on which to perform a search.
+// - If an animal with that name exists within the `animals` Array, remove it.
+// 2. Test that it works on the website.
+function remove(animals, name) {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === name) {
+            animals.splice(i,1)
+            return;
+        }
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+// 1. Write a function declaration called `add` with a signature of `add(animals, animal) { //... }` that:
+//     - Takes 2 parameter, an Array of animals, and an Object representing a new animal to be added.
+//     - Checks that the animal Object has a `name` property with a length > 0.
+//     - Checks that the animal Object has a `species` property with a length > 0.
+//     - Has a **unique** name, meaning no other animals have that name.
+//     - Adds this new Object to the `animals` Array, **only** if all the other conditions pass.
+//     - Make sure it works.
 
+function add(animals, animal) {
+    if (animal.name && animal.name.length > 0 && animal.species && animal.species.length > 0) {
+      var uniqueName = animals.every(function(esixtingAnimal) {
+        return existingAnimal.name !== animal.name;
+      });
+      if (nameIsUnique) {
+        animals.push(animal);
+      }
+    }
+   }
 
 
 /**
